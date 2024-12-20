@@ -113,14 +113,14 @@ with DAG(
 
     dt = get_logical_date()
 
-dim_trigger = TriggerDagRunOperator(
-  task_id="dim_trigger",
+fact_trigger = TriggerDagRunOperator(
+  task_id="fact_trigger",
   trigger_dag_id="Spotify_FACT_HIST_Load",
   execution_date = '{{ ds }}',
   reset_dag_run = True
 )   
 
-incremental_dim_artist_load(cur, dim_artist, dt) >> incremental_dim_track_load(cur, dim_tracks, dt)
+incremental_dim_artist_load(cur, dim_artist, dt) >> incremental_dim_track_load(cur, dim_tracks, dt) >> fact_trigger
 
 
     

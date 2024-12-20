@@ -4,6 +4,7 @@ from airflow.models import Variable
 from airflow.decorators import task
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 from airflow.operators.python import get_current_context
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from datetime import timedelta
 from datetime import datetime
 import snowflake.connector
@@ -129,7 +130,14 @@ with DAG(
 
     cur = return_snowflake_conn()
 
-    create_table >> load_data >> dq_check
+dbt_trigger = TriggerDagRunOperator(
+  task_id="dbt_trigger",
+  trigger_dag_id="BuildELT_dbt",
+  execution_date = '{{ ds }}',
+  reset_dag_run = True
+) 
+
+create_table >> load_data >> dq_check >> dbt_trigger
 
 
     
