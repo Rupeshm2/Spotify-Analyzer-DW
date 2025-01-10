@@ -1,4 +1,4 @@
-# Spotify Data Warehouse Project (DATA226)
+# Spotify Data Warehouse
 
 This project aims to design and implement a **Data Warehouse** for **Spotify** using data from the Spotify platform and Kaggle for historical data. The primary objective is to analyze and process large volumes of Spotify data to derive meaningful insights using a modern data engineering approach. The project utilizes various data processing and transformation techniques, such as ETL (Extract, Transform, Load), data warehousing, and data analysis.
 
