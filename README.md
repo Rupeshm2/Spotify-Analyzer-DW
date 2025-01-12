@@ -32,6 +32,11 @@ This project is built as part of the **DATA226** course on Data Engineering.
 
 ## Getting Started
 
+### Prerequisites
+
+- Python 3.x installed
+- Required Python libraries are present docker_compose_min.yaml
+- Access to Spotify API (API key)
 
 ### System Diagram
 <img src="https://github.com/user-attachments/assets/5bf98172-d9ee-4548-83c0-b89f72ad0296" width="600"/>
@@ -64,13 +69,6 @@ The dataset includes metadata, artist details, and audio features for Spotify tr
 - **Ranking**: Song ranking in various regions.  
 - **Region**: Geographical data representing where the song is trending.
 
-
-
-### Prerequisites
-
-- Python 3.x installed
-- Required Python libraries are present docker_compose_min.yaml
-- Access to Spotify API (API key)
 
 ## Analysis
 
