@@ -8,7 +8,6 @@ This project aims to design and implement a **Data Warehouse** for **Spotify** u
 3. Getting Started
 4. Project Structure
 5. Data Source
-6. How to Run the Project
 
 
 ## Project Overview
@@ -38,11 +37,32 @@ This project is built as part of the **DATA226** course on Data Engineering.
 <img src="https://github.com/user-attachments/assets/5bf98172-d9ee-4548-83c0-b89f72ad0296" width="600"/>
 
 
+## Project Structure
+
+
 ### Data Model
 
 We have created below data model for Spotify metadata.
 
 <img src="https://github.com/user-attachments/assets/ed0052f7-daec-403b-929a-9601e4ae03a0" width="600"/>
+
+
+## Data Source
+
+The dataset includes metadata, artist details, and audio features for Spotify tracks, comprising **35 columns** (categorical and numerical) and approximately **1 million rows**.
+
+### Source
+- **Spotify API**
+- **Kaggle**  
+
+### Key Columns
+- **Artist Metadata**: Information about the artist(s) associated with each track.  
+- **Song Information**: Track name, album name, and other descriptive details.  
+- **Audio Features**: Acoustic properties like tempo, danceability, energy, and more.  
+- **Song Release Date**: Date when the track was first released.  
+- **Popularity**: Spotify's popularity index for the track.  
+- **Ranking**: Song ranking in various regions.  
+- **Region**: Geographical data representing where the song is trending.
 
 
 
